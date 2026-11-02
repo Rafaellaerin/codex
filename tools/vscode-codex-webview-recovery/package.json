@@ -1,0 +1,25 @@
+{
+  "name": "codex-webview-recovery",
+  "displayName": "Codex Webview Recovery",
+  "description": "Manually remount a failed Codex sidebar without clearing extension state (openai/codex#56691).",
+  "version": "0.1.0",
+  "publisher": "Rafaellaerin",
+  "private": true,
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "categories": ["Other"],
+  "main": "./extension.js",
+  "activationEvents": ["onCommand:codexWebviewRecovery.retrySidebar"],
+  "contributes": {
+    "commands": [
+      {
+        "command": "codexWebviewRecovery.retrySidebar",
+        "title": "Codex: Retry Sidebar (Remount)"
+      }
+    ]
+  },
+  "scripts": {
+    "test": "node --test"
+  }
+}
